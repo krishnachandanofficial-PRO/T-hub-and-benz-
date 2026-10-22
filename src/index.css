@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #03070C;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-950/65 backdrop-blur-2xl border border-white/10 rounded-3xl;
+  }
+  
+  .glass-dark {
+    @apply bg-black/70 backdrop-blur-2xl border border-white/10;
+  }
+  
+  .neon-cyan {
+    color: #00F0FF;
+    text-shadow: 0 0 8px #00F0FF88;
+  }
+  
+  .neon-teal {
+    color: #00E5A3;
+    text-shadow: 0 0 8px #00E5A388;
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 12px #00F0FF55, 0 0 24px #00F0FF22;
+  }
+  
+  .glow-teal {
+    box-shadow: 0 0 12px #00E5A355, 0 0 24px #00E5A322;
+  }
+  
+  .squircle {
+    border-radius: 22.5%;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Mercedes star pattern overlay */
+.star-pattern {
+  background-image: radial-gradient(circle, rgba(0,240,255,0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.1);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00F0FF;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00F0FF88;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00F0FF;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 8px #00F0FF88;
+}
